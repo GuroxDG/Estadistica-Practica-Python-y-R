@@ -69,3 +69,18 @@ __Robusto__ insensible a valores extremos
 
 __Atípico__ Valor de un dato que es muy diferente de la mayoría de los valores de los datos (valor extremo)
 
+# Media
+
+La estimación más elemental para la localización es el valor medio o  promedio(average). La media es la suma de todos los valores dividida por el número de valores.
+
+La variación de la media se conoce como __media truncada(trimmed mean)__, que se calcula ignorando un número fijo, en cada extremo, de valores ordenados y a continuación se calcula el promedio de los valores restantes. La media truncada elimina la influencia de los valores extremos.
+
+Otro tipo de media es la __media ponderada (weighted mean)__, que se calcula multiplicando cada valor de datos _xi_ por el peso _wi_ especificado por el usuario y dividiendo su suma por la suma de las ponderaciones.
+
+Hay dos motivos fundamentales para usar una media ponderada:
+* Algunos valores son intrinsecamente más variables que otros, y las observaciones muy variables reciben un peso menor.
+* Los datos recopilados no representan por igual a los diferentes grupos que nos interesa medir.
+
+# Estimación de medianas robustas
+
+
