@@ -69,7 +69,7 @@ __Robusto__ insensible a valores extremos
 
 __Atípico__ Valor de un dato que es muy diferente de la mayoría de los valores de los datos (valor extremo)
 
-# Media
+## Media
 
 La estimación más elemental para la localización es el valor medio o  promedio(average). La media es la suma de todos los valores dividida por el número de valores.
 
@@ -81,6 +81,20 @@ Hay dos motivos fundamentales para usar una media ponderada:
 * Algunos valores son intrinsecamente más variables que otros, y las observaciones muy variables reciben un peso menor.
 * Los datos recopilados no representan por igual a los diferentes grupos que nos interesa medir.
 
-# Estimación de medianas robustas
+## Estimación de medianas robustas
 
+La mediana es el valor central de una lista de datos ordenados de menor a mayor.
+
+### Valores atípicos
+
+A la mediana se la conoce como una estimación robusta de la localización, ya que no está influenciada por valores atípicos (outliers) que podrían sesgar los resultados. 
+
+* Cuando los valores atípicos son el resultado de datos incorrectos, la media dará como resultado una estimación deficiente de la localización, mientras que la mediana seguirá siendo válida.
+
+La mediana no es la única estimación robusta de la localización, de hecho la media truncada se usa habitualmente para evitar la influencia de valores atípicos.
+
+## Ideas clave
+
+* La métrica básica para la localización es la media, pero puede ser sensible a valores atípicos
+* Otras métricas son menos sencibles a valores atípicos y a distribuciones inusuales y, por lo tanto, son más robustas
 
