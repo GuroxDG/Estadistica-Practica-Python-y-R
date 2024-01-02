@@ -96,5 +96,46 @@ La mediana no es la única estimación robusta de la localización, de hecho la 
 ## Ideas clave
 
 * La métrica básica para la localización es la media, pero puede ser sensible a valores atípicos
-* Otras métricas son menos sencibles a valores atípicos y a distribuciones inusuales y, por lo tanto, son más robustas
+* Otras métricas son menos sensibles a valores atípicos y a distribuciones inusuales y, por lo tanto, son más robustas
+
+# Estimación de la variabilidad
+
+La localización es sola una dimensión para extraer el resumen de una característica. Una segunda dimensión, la variabilidad, también conocida como una dispesión, mide el grado de agrupación o dispesión de los valores de los datos.
+
+
+## Términos clave de métricas de variabilidad
+
+__Desviaciones__ Diferencias entre los valores observados y la estimación de la localización (errores, residuales).
+__Varianza__ Suma de los cuadrados de la desviaciones de la media al cuadrafo y dividida por n-1, donde n es el número de valores de datos.(error cuadrático medio)
+__Desviación estándar__ Raíz cuadrada de la varianza.
+__Desviación media absoluta__ Media de los valores absolutos de las desviaciones de la media.(normal L1, norma Manhattan)
+__Desviación absoluta mediana de la mediana__ Media de los valores absolutos de las desviaciones de la mediana.
+__Rango__ La diferencia entre el mayor y el menor valor de un conjunto de datos.
+__Estadísticos ordinales__ Métricas basadas en los valores de datos ordenados de menor a mayor.(rangos)
+__Percentil__ Valor tal que le _P_ por ciento de los valores toma este valor o un valor inferior y para (100-P) el porcentaje toma este valor o un valor superior. (cuantil)
+__Rango intercuartil__ Diferencia entre el percentil 75 y el percentil 25. (IQR)
+
+## Desviación estándar y estimaciones relacionadas
+
+La estimación de variabilidad más conocidas son la varianza y la desviación estándar, la  desviación estándar es mucho más fácil de interpretar que la varianza, ya que está en la misma escala que los datos originales.
+
+La varianza, la desviación estándar y la desviación absoluta mediana son robustas a valores atípicos y extremos. La varianza y la desviación estándar son especialmente sensibles a los valores atípicos, ya que se basan en las desviaciones al cuadrado.
+
+Una estimación robusta de la variabilidad es la desviación absoluta mediana de la mediana o MAD.
+
+## Estimación basada en percentiles
+
+Un enfoque diferente para estimar la dispersión se centra en observar la distribución de los datos ordenados. Los esdísticos que tienen como base los datos ordenados(clasificados) se denominan estadísticos de orden(order statistics)
+
+La desviación estándar es casi dos veces mayor que la MAD(en R por defecto, la escala MAD se ajusta para estar en la misma escala que la de la media). Esta hecho no es sorprendente, ya que la desviación estándar es sensible a valores atípicos.
+
+## Ideas clave
+
+* La varianza y la desviación estándar son los estadísticos de variabilidad más difundidos y de los que más se informa de manera rutinaria.
+* Ambos son sensibles a los valores atípicos.
+* Entre las métricas más robustas se encuentran la desviación absoluta media, la MAD y los percentiles
+
+# Exproración de la distribución de datos
+
+## Términos clave de la exploración de la distribución
 

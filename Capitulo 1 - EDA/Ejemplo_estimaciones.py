@@ -4,7 +4,10 @@ import pandas as pd
 import numpy as np
 import os
 import wquantiles
+
+from statsmodels import robust
 from scipy import stats
+
 
 # %%
 
@@ -26,4 +29,18 @@ state['Población'].median()
 np.average(state['Homicidios'], weights=state['Población'])
 # %%
 wquantiles.median(state['Homicidios'], weights=state['Población'])
+# %%
+
+# desvición estándar
+state['Población'].std()
+# %%
+
+# IQR
+state['Población'].quantile(0.75) - state['Población'].quantile(0.25)
+
+# %%
+
+# MAD
+robust.scale.mad(state['Población'])
+
 # %%

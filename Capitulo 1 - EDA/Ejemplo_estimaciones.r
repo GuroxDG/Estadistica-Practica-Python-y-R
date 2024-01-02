@@ -25,10 +25,18 @@ mean(state[['Población']], trim=0.1) # trim ignora el 10 de cada extremo
 
 median(state[['Población']])
 
-install.packages("matrixStats")
+#install.packages("matrixStats")
 library("matrixStats")
 
 weighted.mean(state[['Homicidios']], w=state[['Población']])
 
 weightedMedian(state[['Homicidios']], w=state[['Población']])
 
+# Desviación estandar
+sd(state[['Población']])
+
+# Rango Intercuartilico
+IQR(state[['Población']])
+
+#MAD
+mad(state[['Población']])
