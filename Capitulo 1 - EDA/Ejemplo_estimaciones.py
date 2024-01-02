@@ -20,15 +20,30 @@ state  = pd.read_csv(p+'\state.csv')
 state
 
 # %%
+
+# Media 
 state['Población'].mean()
+
 # %%
+
+# Media truncada
 stats.trim_mean(state['Población'], 0.1) # trim ignora el 10 de cada extremo
+
 # %%
+
+# Mediana
 state['Población'].median()
+
 # %%
+
+# Media ponderada
 np.average(state['Homicidios'], weights=state['Población'])
+
 # %%
+
+# Mediana ponderada
 wquantiles.median(state['Homicidios'], weights=state['Población'])
+
 # %%
 
 # desvición estándar
