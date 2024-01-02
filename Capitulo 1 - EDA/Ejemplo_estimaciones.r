@@ -21,6 +21,7 @@ state
 
 mean(state[['Población']])
 
+# Media truncada
 mean(state[['Población']], trim=0.1) # trim ignora el 10 de cada extremo
 
 median(state[['Población']])
@@ -28,8 +29,10 @@ median(state[['Población']])
 #install.packages("matrixStats")
 library("matrixStats")
 
+# Media ponderada
 weighted.mean(state[['Homicidios']], w=state[['Población']])
 
+# Mediana ponderada
 weightedMedian(state[['Homicidios']], w=state[['Población']])
 
 # Desviación estandar
