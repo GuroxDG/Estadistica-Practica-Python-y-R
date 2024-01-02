@@ -8,6 +8,14 @@ import wquantiles
 from statsmodels import robust
 from scipy import stats
 
+#%%
+
+import common
+from pathlib import Path
+
+#DATA = common.dataDirectory()
+DATA = Path().resolve() / 'data'
+DATA
 
 # %%
 
