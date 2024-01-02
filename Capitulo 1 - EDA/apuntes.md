@@ -139,3 +139,9 @@ La desviación estándar es casi dos veces mayor que la MAD(en R por defecto, la
 
 ## Términos clave de la exploración de la distribución
 
+__Diagrama de caja__ Permite visualizar de forma rápida la distribución de datos.(diagrama de caja y bigotes)
+__Tabla de frecuencias__ Registro del recuento de valores de datos númericos que caen en un conjunto de intervalos.(contenedores)
+__Histograma__ El diagrama de la tabla de frecuencias con los contenedores o intervalos en el eje x y el recuento (proporción) en el eje y. Aunque los gráficos de barra son visualmente similares, no deben confundirse con los histogramas.
+__Diagrama de densidad__ Versión suavisada del histograma, a menudo basada en una estimación de la densidad del núcleo (Estimador de densidad de Kernel)
+
+## Percentiles y diagramas de caja
