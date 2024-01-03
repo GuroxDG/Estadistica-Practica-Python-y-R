@@ -167,4 +167,4 @@ En teoría esta estadística, la localización y la variabilidad se conocen como
 
 La asimetría se refiere a si los datos están sesgados hacia valores mayores o menores, y la curtosis indica la propensión de los datos a tener valores extremos.
 
-# Diagramay estimación de la curva de densidad
+# Diagramas y estimación de la curva de densidad
