@@ -43,3 +43,22 @@ IQR(state[['Población']])
 
 #MAD
 mad(state[['Población']])
+
+# Percentiles
+quantile(state[['Homicidios']], p=c(.05, .25, .5, .75, .95))
+
+#Boxplot
+boxplot(state[['Población']]/1000000, ylab='Population (millions)')
+
+# Tabla de frecuencias
+breaks <- seq(from=min(state[['Población']]), to=max(state[['Población']]), length=11)
+breaks
+
+pop_freq <- cut(state[['Población']], breaks=breaks, right=TRUE, include.lowest=TRUE)
+pop_freq
+
+table(pop_freq)
+
+# Histogram
+options(scipen=5)
+hist(state[['Población']], breaks=breaks)

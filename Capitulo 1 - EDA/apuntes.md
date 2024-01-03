@@ -145,3 +145,26 @@ __Histograma__ El diagrama de la tabla de frecuencias con los contenedores o int
 __Diagrama de densidad__ Versión suavisada del histograma, a menudo basada en una estimación de la densidad del núcleo (Estimador de densidad de Kernel)
 
 ## Percentiles y diagramas de caja
+La cultura popular ha acuñado el término de los uno por ciento para referirse a las personas con una riqueza superior al percentil 99
+
+## Tablas de frecuencias e histogramas
+
+La tabla de frecuencias de una variable divide el rango de la variable en segmentos igualmente espaciados y nos dice cuántos valores caen dentro de cada segmento.
+
+Tanto las tablas de frecuencias como los percentiles, extraen el resumen de los datos mediante la creación de contenedores. En general, los cuartiles y deciles tendrán el mismo número de valores en cada contenedor, pero los tamaños de los contenedores serán diferentes. La tabla de frecuencias por el contrario, tendrá diferente número de valores en los contenedores y el tamaño de los contenedores será el mismo para todos.
+
+El histograma es un modo de visualizar la tabla de frecuencias, con contenedores en el eje x y los valores de los datos en el eje y.
+
+Los histogramas se representan gráficamente teniendo en cuenta que:
+* Los contenedores vacíos se incluyen en el gráfico
+* Los contenedores tienen la misma anchura
+* El número de contenedores(o, de manera equivalente, el tamaño del contenedor) depende del usuario.
+* Las barras son contiguas: no se muestran espacios vacíos entre las barras, a menos que hay aun contenedor vacío
+
+## Momentos de la distribución estadística
+
+En teoría esta estadística, la localización y la variabilidad se conocen como el primer y segundo momentos (moments) de una distribución. Los momentos tercero y cuarto se denominan asimetría (skewness) y curtosis (kurtosis).
+
+La asimetría se refiere a si los datos están sesgados hacia valores mayores o menores, y la curtosis indica la propensión de los datos a tener valores extremos.
+
+# Diagramay estimación de la curva de densidad
