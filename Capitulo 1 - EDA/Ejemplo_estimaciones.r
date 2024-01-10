@@ -62,3 +62,7 @@ table(pop_freq)
 # Histogram
 options(scipen=5)
 hist(state[['Población']], breaks=breaks)
+
+# Density
+hist(state[['Población']], freq=FALSE)
+lines(density(state[['Homicidios']]), lwd=3, col='blue')

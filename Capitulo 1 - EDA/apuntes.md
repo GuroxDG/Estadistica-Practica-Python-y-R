@@ -168,3 +168,12 @@ En teoría esta estadística, la localización y la variabilidad se conocen como
 La asimetría se refiere a si los datos están sesgados hacia valores mayores o menores, y la curtosis indica la propensión de los datos a tener valores extremos.
 
 # Diagramas y estimación de la curva de densidad
+
+Muestra la distribución de los valores de los datos mediante una línea continua. Se puede considerar como un histograma suavisado, aunque normalmente se calcula directamente a partir de los datos a través de una estimación de la densidad del núcleo.
+
+## Ideas clave
+
+* El diagrama de densidad es una versión estimada del histograma. Requiere una función para estimar el diagrama basado en datos.
+* Un diagrama de caja también da una idea rápida de la distribución de los datos. A menudo se utiliza en visualizaciones paralelas para comparar distribuciones
+* La tabla de frecuencias es una versión tabular de las frecuencias de lso resultados que se encuentran en un histograma
+* EL histograma de frecuencias proporciona de un vistazo una idea de la distribución de los datos

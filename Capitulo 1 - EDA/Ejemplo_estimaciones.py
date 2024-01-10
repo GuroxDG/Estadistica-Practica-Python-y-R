@@ -127,3 +127,9 @@ ax = (state['Población']/1_000_000).plot.hist(figsize=(4,4))
 ax.set_xlabel('Población (millions)')
 
 # %%
+
+ax = state['Homicidios'].plot.hist(density=True, xlim=[0, 12], bins=(range(1,12)))
+state['Homicidios'].plot.density(ax=ax)
+ax.set_xlabel('Murder rate (100.000)')
+
+# %%
