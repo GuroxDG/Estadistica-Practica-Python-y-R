@@ -133,3 +133,14 @@ state['Homicidios'].plot.density(ax=ax)
 ax.set_xlabel('Murder rate (100.000)')
 
 # %%
+
+dfw  = pd.read_csv(p+'\dfw_airline.csv')
+dfw
+
+# %%
+
+ax = dfw.transpose().plot.bar(figsize=(4, 4), legend=False)
+ax.set_xlabel('Cause of delay')
+ax.set_ylabel('Count')
+
+# %%

@@ -66,3 +66,12 @@ hist(state[['Población']], breaks=breaks)
 # Density
 hist(state[['Población']], freq=FALSE)
 lines(density(state[['Homicidios']]), lwd=3, col='blue')
+
+# Data
+s = paste(getwd(),"/data/dfw_airline.csv", sep="")
+print(s)
+dfw <- read.csv(s)
+dfw
+
+# Diagrama de barras
+barplot(as.matrix(dfw)/6, ces.axis=0.8, cex.names=0.7, xlab='Cause of delay', ylab='Count')
