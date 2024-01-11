@@ -75,3 +75,28 @@ dfw
 
 # Diagrama de barras
 barplot(as.matrix(dfw)/6, ces.axis=0.8, cex.names=0.7, xlab='Cause of delay', ylab='Count')
+
+# Correlación
+PSDS_PATH <- file.path(dirname(dirname(getwd())))
+print(PSDS_PATH)
+
+p = paste(getwd(),"/data/sp500_data.csv.gz", sep="")
+sp500_px <- read.csv(p, row.names=1)
+
+p = paste(getwd(),"/data/sp500_sectors.csv", sep="")
+sp500_sym <- read.csv(p, stringsAsFactors = FALSE)
+
+telecom <- sp500_px[, sp500_sym[sp500_sym$sector == 'telecommunications_services', 'symbol']]
+telecom <- telecom[row.names(telecom) > '2012-07-01',]
+telecom_cor <- cor(telecom)
+telecom_cor
+
+# Diagrama de correlación
+
+etfs <- sp500_px[row.names(sp500_px) > '2012-07-01', 
+                 sp500_sym[sp500_sym$sector == 'etf', 'symbol']]
+
+#install.packages("corrplot")
+library('corrplot')
+
+corrplot(cor(etfs), method='ellipse')

@@ -187,3 +187,44 @@ __Valor esperado:__ Cuando las categorías se pueden asociar con un valor númer
 __Gráficos de barras:__ frecuencia o proporción de cada categoría representada en barras
 __Gráficos en forma de la tarta:__ frecuencia o proporción de cada categoría representada en forma de cuña de un pastel.
 
+Los gráficos en forma de tarta son una alternativa a los gráficos de barras, aunque los estadísticos y los expertos en visualización de datos generalmente evitan lso gráficos en forma de tarta por ser menos informativos visualmente.
+
+La conversión de datos númericos en datos categóricos es un paso importante y se utiliza de forma generalizada, ya que reduce la complejidad de los datos.
+
+## Moda 
+
+Es el valor (o valores en caso de empate) que aparece con mayor frecuencia en los datos, por lo general no se utiliza para los datos númericos
+
+## Valor esperado
+Un tipo especial de datos categóricos son los datos en los que las categorías representan o pueden asignarse a valores discretos en la misma escala.
+
+El valor esperado es calcula:
+1. Multiplicamos cada resultado por la probalidad de que ocurra
+2. Sumamos esos valores
+
+El valor esperado es realmente una forma de media ponderada.
+
+## Probalidad
+La probabilidad de que sucedad un evento es la proporción de veces que ocurriría si la situación pudiera repetirse una y otra vez, innumerables veces.
+
+## Ideas clave
+
+* Los datos categóricos generalmente se resumen en porcentajes y se pueden visualizar en un gráfico de barras.
+* Las categorías pueden representar diferentes cosas, niveles de una variable de tipo factor o datos numéricos que se han agrupación
+* El valor esperado, a menudo se usa para totalizar los niveles de las variables de tipo de factor
+
+# Correlación
+
+# Términos clave de la Correlación
+
+__Coeficiente de correlación:__ Métrica que mide el grado en que las variables numéricas están asociadas entre sí (varia de -1 a +1)
+__Matriz de correlación:__ Tabla en la que las variables se muestran tanto en filas como en columnas, y los valores de las celdas son las correlaciones entre las variables
+__Diagrama de dispersión:__ Diagrama en el que el eje x es el valor de una variable y el eje y es el valor de otra
+
+
+El Coeficiente de correlación siempre esta entre  +1 (correlación positiva perfecta) y -1 (correlación negativa perfecta). El 0 indica que no hay correlación
+
+Las variables pueden tener una asociación no lineal, en cuyo caso el coeficiente de correlación puede no ser una métrica útil.
+
+Basados en el rango de los datos hay otrso estadísticos del tipo de coeficiente de correlación, como el coef. de Spearman o Kendall, Los cientifícos de datos generalmente pueden ceñirse al coeficiente de correlación de Pearson y sus alternativas robustas para el análisis de datos.
+

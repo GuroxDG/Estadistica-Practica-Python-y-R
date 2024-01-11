@@ -6,6 +6,7 @@ import numpy as np
 import os
 import pandas as pd 
 import wquantiles
+import seaborn as sns
 
 from statsmodels import robust
 from scipy import stats
@@ -142,5 +143,34 @@ dfw
 ax = dfw.transpose().plot.bar(figsize=(4, 4), legend=False)
 ax.set_xlabel('Cause of delay')
 ax.set_ylabel('Count')
+
+# %%
+
+sp500_sym = pd.read_csv(p+'\sp500_sectors.csv')
+sp500_px = pd.read_csv(p+'\sp500_data.csv.gz', index_col=0)
+
+# %%
+telecomSymbols = sp500_sym[sp500_sym['sector'] == 'telecommunications_services']['symbol']
+
+telecom = sp500_px.loc[sp500_px.index >= '2012-07-01', telecomSymbols]
+telecom.corr()
+print(telecom)
+
+# %%
+
+etfs = sp500_px.loc[sp500_px.index > '2012-07-01', 
+                    sp500_sym[sp500_sym['sector'] == 'etf']['symbol']]
+print(etfs.head())
+
+# %%
+
+fig, ax = plt.subplots(figsize=(5, 4))
+ax = sns.heatmap(etfs.corr(), vmin=-1, vmax=1, 
+                 cmap=sns.diverging_palette(20, 220, as_cmap=True),
+                 ax=ax)
+
+plt.tight_layout()
+plt.show()
+
 
 # %%
