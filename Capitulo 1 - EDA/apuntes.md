@@ -177,3 +177,13 @@ Muestra la distribución de los valores de los datos mediante una línea continu
 * Un diagrama de caja también da una idea rápida de la distribución de los datos. A menudo se utiliza en visualizaciones paralelas para comparar distribuciones
 * La tabla de frecuencias es una versión tabular de las frecuencias de lso resultados que se encuentran en un histograma
 * EL histograma de frecuencias proporciona de un vistazo una idea de la distribución de los datos
+
+# Exploración de datos binarios y categóricos
+
+## Términos clave de la exploración de datos categóricos
+
+__Moda:__ Categoría o valor que ocurre con más frecuencia en un conjunto de datos
+__Valor esperado:__ Cuando las categorías se pueden asociar con un valor númerico, el valor esperado propociona un valor promedio basado en la probalidad de ocurrencia de una categoría
+__Gráficos de barras:__ frecuencia o proporción de cada categoría representada en barras
+__Gráficos en forma de la tarta:__ frecuencia o proporción de cada categoría representada en forma de cuña de un pastel.
+
