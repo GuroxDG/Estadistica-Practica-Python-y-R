@@ -239,3 +239,16 @@ Es la forma tradicional de visualizar la relación entre dos variables.
 * El coeficiente de correlación es una métrica estándarizada por lo que siempre varía entre -1 y  1
 * Un coeficiente de correlación de cero indica que no ha y correlación, pero hay que tener en cuenta que las disposiciones aleatorias de datos producirán varoles tanto positivos como negativos
 
+# Exploración de dos o más variables
+
+## Términos clave de la exploración de dos o más variables
+
+__Tabla de contingencia:__ Registro del recuento entre dos o más variables categóricas.
+__Agrupación hexagonal:__ Diagrama de dos variables numéricas con los registros agrupados en hexágonos.
+__Diagrama de contorno:__ Diagrama que muestra la densidad de dos variables numéricas en forma de mapa topográfico.
+__Diagrama de violín:__ Similar a un diagrama de caja pero en el que se muestra la densidad estimada.
+
+## Agrupación hexagonal y contorno
+
+
+
