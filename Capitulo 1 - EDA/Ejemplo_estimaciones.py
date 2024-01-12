@@ -101,10 +101,12 @@ binnedPopulation
 
 # %%
 
+# Conteo de frecuencias
 binnedPopulation.value_counts()
 
 # %%
 
+# Conteo de frecuencias por estados
 binnedPopulation.name = 'binnedPopulation'
 df = pd.concat([state, binnedPopulation], axis=1)
 df = df.sort_values(by='Población')
@@ -129,16 +131,16 @@ ax.set_xlabel('Población (millions)')
 
 # %%
 
+# Diagrama de densidad
+
 ax = state['Homicidios'].plot.hist(density=True, xlim=[0, 12], bins=(range(1,12)))
 state['Homicidios'].plot.density(ax=ax)
 ax.set_xlabel('Murder rate (100.000)')
 
 # %%
 
+# Diagrama de barras
 dfw  = pd.read_csv(p+'\dfw_airline.csv')
-dfw
-
-# %%
 
 ax = dfw.transpose().plot.bar(figsize=(4, 4), legend=False)
 ax.set_xlabel('Cause of delay')
@@ -146,10 +148,15 @@ ax.set_ylabel('Count')
 
 # %%
 
+# Data
+
 sp500_sym = pd.read_csv(p+'\sp500_sectors.csv')
 sp500_px = pd.read_csv(p+'\sp500_data.csv.gz', index_col=0)
 
 # %%
+
+# Tabla de correlaciones
+
 telecomSymbols = sp500_sym[sp500_sym['sector'] == 'telecommunications_services']['symbol']
 
 telecom = sp500_px.loc[sp500_px.index >= '2012-07-01', telecomSymbols]
@@ -158,12 +165,14 @@ print(telecom)
 
 # %%
 
+# Valores filtrados
 etfs = sp500_px.loc[sp500_px.index > '2012-07-01', 
                     sp500_sym[sp500_sym['sector'] == 'etf']['symbol']]
 print(etfs.head())
 
 # %%
 
+# Diagrama de correlación
 fig, ax = plt.subplots(figsize=(5, 4))
 ax = sns.heatmap(etfs.corr(), vmin=-1, vmax=1, 
                  cmap=sns.diverging_palette(20, 220, as_cmap=True),
@@ -172,5 +181,15 @@ ax = sns.heatmap(etfs.corr(), vmin=-1, vmax=1,
 plt.tight_layout()
 plt.show()
 
+
+# %%
+
+# Diagrama de dispersión
+
+ax = telecom.plot.scatter(x='T', y='VZ', figsize=(4, 4), marker='*') 
+ax.set_xlabel('ATT (T)')
+ax.set_ylabel('Verizon (VZ)')
+ax.axhline(0, color='grey', lw=1)
+ax.axvline(0, color='grey', lw=1)
 
 # %%

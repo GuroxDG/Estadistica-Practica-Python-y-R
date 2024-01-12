@@ -86,6 +86,8 @@ sp500_px <- read.csv(p, row.names=1)
 p = paste(getwd(),"/data/sp500_sectors.csv", sep="")
 sp500_sym <- read.csv(p, stringsAsFactors = FALSE)
 
+# Correlación entre variables
+
 telecom <- sp500_px[, sp500_sym[sp500_sym$sector == 'telecommunications_services', 'symbol']]
 telecom <- telecom[row.names(telecom) > '2012-07-01',]
 telecom_cor <- cor(telecom)
@@ -100,3 +102,8 @@ etfs <- sp500_px[row.names(sp500_px) > '2012-07-01',
 library('corrplot')
 
 corrplot(cor(etfs), method='ellipse')
+
+# Diagrama de dispersión
+
+plot( telecom$T, telecom$VZ, xlab="ATT (T)", ylab="Verizon (VZ)")
+

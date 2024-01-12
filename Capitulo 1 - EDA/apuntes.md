@@ -215,7 +215,7 @@ La probabilidad de que sucedad un evento es la proporción de veces que ocurrir�
 
 # Correlación
 
-# Términos clave de la Correlación
+## Términos clave de la Correlación
 
 __Coeficiente de correlación:__ Métrica que mide el grado en que las variables numéricas están asociadas entre sí (varia de -1 a +1)
 __Matriz de correlación:__ Tabla en la que las variables se muestran tanto en filas como en columnas, y los valores de las celdas son las correlaciones entre las variables
@@ -227,4 +227,15 @@ El Coeficiente de correlación siempre esta entre  +1 (correlación positiva per
 Las variables pueden tener una asociación no lineal, en cuyo caso el coeficiente de correlación puede no ser una métrica útil.
 
 Basados en el rango de los datos hay otrso estadísticos del tipo de coeficiente de correlación, como el coef. de Spearman o Kendall, Los cientifícos de datos generalmente pueden ceñirse al coeficiente de correlación de Pearson y sus alternativas robustas para el análisis de datos.
+
+## Diagramas de dispersión
+
+Es la forma tradicional de visualizar la relación entre dos variables.
+
+## Ideas clave
+
+* El coeficiente de correlación mide el grado en que dos variables emparejadas están asociadas entre sí.
+* Cuando los valores altos de v1 acompañan a los valores altos de v2, v1 y v2 se asocian positivamente, de forma inversa se asocian negativa
+* El coeficiente de correlación es una métrica estándarizada por lo que siempre varía entre -1 y  1
+* Un coeficiente de correlación de cero indica que no ha y correlación, pero hay que tener en cuenta que las disposiciones aleatorias de datos producirán varoles tanto positivos como negativos
 
